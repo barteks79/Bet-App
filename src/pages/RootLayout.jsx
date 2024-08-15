@@ -1,9 +1,10 @@
+import AsideNavbar from '../components/navigation/aside/AsideNavbar';
 import TopNavbar from '../components/navigation/top/TopNavbar';
 
 export default function RootLayout() {
 	return (
 		<>
-			<aside></aside>
+			<AsideNavbar />
 			<main>
 				<TopNavbar />
 				<section></section>

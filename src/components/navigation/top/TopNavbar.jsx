@@ -9,6 +9,7 @@ export default function TopNavbar() {
 				<NavLink>My Bets</NavLink>
 			</ul>
 			<ul>
+				<NavLink>Search</NavLink>
 				<NavLink>Deposit</NavLink>
 				<NavLink>$2568.19</NavLink>
 			</ul>
