@@ -8,7 +8,7 @@ import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import AsideDetails from './AsideDetails';
 import styles from './Animations.module.css';
 
-export default function AsideCategory({ icon, children }) {
+function AsideCategory({ icon, children }) {
 	const dispatch = useDispatch();
 	const openedCategory = useSelector(state => state.ui.openedDropdown);
 
@@ -34,3 +34,5 @@ export default function AsideCategory({ icon, children }) {
 		</li>
 	);
 }
+
+export default AsideCategory;

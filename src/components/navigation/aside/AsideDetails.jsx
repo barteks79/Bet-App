@@ -2,7 +2,7 @@
 import { NavLink } from 'react-router-dom';
 import styles from './Animations.module.css';
 
-export default function AsideDetails({ isOpen, type }) {
+function AsideDetails({ isOpen, type }) {
 	return (
 		<ul className={`w-full bg-primary text-xl ${styles.dropdown} ${isOpen && styles.open}`}>
 			<li className="flex w-aside-wrapper justify-center items-center gap-5">
@@ -12,3 +12,5 @@ export default function AsideDetails({ isOpen, type }) {
 		</ul>
 	);
 }
+
+export default AsideDetails;

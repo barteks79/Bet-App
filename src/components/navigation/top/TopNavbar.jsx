@@ -1,6 +1,6 @@
 import NavLink from './NavItem';
 
-export default function TopNavbar() {
+function TopNavbar() {
 	return (
 		<nav>
 			<ul>
@@ -16,3 +16,5 @@ export default function TopNavbar() {
 		</nav>
 	);
 }
+
+export default TopNavbar;
