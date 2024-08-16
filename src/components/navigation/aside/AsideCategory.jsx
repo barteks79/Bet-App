@@ -4,8 +4,9 @@ import { uiActions } from '../../../store/uiSlice';
 import { isDropdownOpen } from '../../../util/helpers';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import AsideDetails from './AsideDetails';
+import styles from './Animations.module.css';
 
 export default function AsideCategory({ icon, children }) {
 	const dispatch = useDispatch();
@@ -27,7 +28,7 @@ export default function AsideCategory({ icon, children }) {
 					{icon}
 					{children}
 				</p>
-				<FontAwesomeIcon icon={isCategoryOpen ? faChevronUp : faChevronDown} />
+				<FontAwesomeIcon icon={faChevronUp} rotation={isCategoryOpen ? 180 : 0} className={styles.chevron} />
 			</button>
 			{isCategoryOpen && <AsideDetails type={category} />}
 		</li>
