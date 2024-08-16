@@ -30,7 +30,7 @@ function AsideCategory({ icon, children }) {
 				</p>
 				<FontAwesomeIcon icon={faChevronUp} rotation={isCategoryOpen ? 180 : 0} className={styles.chevron} />
 			</button>
-			<AsideDetails isOpen={isCategoryOpen} type={category} />
+			<AsideDetails isOpen={isCategoryOpen} />
 		</li>
 	);
 }
