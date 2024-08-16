@@ -13,7 +13,7 @@ export default {
 			},
 			width: {
 				aside: '12%',
-				'aside-wrapper': '85%',
+				'aside-wrapper': '75%',
 			},
 		},
 	},
