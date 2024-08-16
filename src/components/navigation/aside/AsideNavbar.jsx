@@ -1,11 +1,15 @@
+import AsideCategory from './AsideCategory';
 import AsideLeague from './AsideLeague';
 
 export default function AsideNavbar() {
 	return (
 		<aside>
 			<section>
-				<ul></ul>
+				<ul>
+					<AsideCategory />
+				</ul>
 			</section>
+
 			<section>
 				<ul>
 					<AsideLeague image="https://media.api-sports.io/football/leagues/39.png">Premier League</AsideLeague>
