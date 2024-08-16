@@ -4,12 +4,16 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				'primary-dark': '#282C3D',
-				primary: '#282C3DF2',
-				'primary-light': '#282C3DE0',
+				'primary-dark': '#121623',
+				primary: '#141A2FD2',
+				'primary-light': '#1E233B',
 				secondary: '#0085BE',
 				'secondary-light': '#00A4EA',
 				'gray-light': '#B9A9A',
+			},
+			width: {
+				aside: '12%',
+				'aside-wrapper': '85%',
 			},
 		},
 	},
