@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-	dropdownOpen: 'leagues',
+	openedDropdown: 'leagues',
 };
 
 const slice = createSlice({
@@ -9,7 +9,12 @@ const slice = createSlice({
 	initialState,
 	reducers: {
 		openDropdown(state, action) {
-			state.dropdownOpen = action.payload;
+			const category = action.payload;
+			if (state.openedDropdown === category) {
+				state.openedDropdown = '';
+				return;
+			}
+			state.openedDropdown = category;
 		},
 	},
 });
