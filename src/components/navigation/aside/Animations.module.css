@@ -1,3 +1,15 @@
 .chevron {
 	transition: transform 0.3s ease;
 }
+
+.dropdown {
+	overflow: hidden;
+	padding: 0;
+	max-height: 0px;
+	transition: max-height 0.2s ease, padding 0.2s ease;
+}
+
+.dropdown.open {
+	max-height: 100px;
+	padding: 20px 0;
+}
