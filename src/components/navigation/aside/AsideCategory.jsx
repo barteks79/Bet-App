@@ -7,15 +7,15 @@ export default function AsideCategory({ icon, isOpen, children }) {
 	const type = children.toLowerCase();
 
 	return (
-		<li className="flex flex-col items-start">
-			<button className="flex items-center justify-between w-full">
-				<p>
+		<li className="flex flex-col items-start gap-5">
+			<button className="flex self-center items-center justify-between text-lg text-grey-light w-aside-wrapper">
+				<p className="flex items-center gap-5">
 					{icon}
 					{children}
 				</p>
 				<FontAwesomeIcon icon={isOpen ? faChevronUp : faChevronDown} />
 			</button>
-			{isOpen && <AsideDetails data={type} />}
+			{isOpen && <AsideDetails type={type} />}
 		</li>
 	);
 }

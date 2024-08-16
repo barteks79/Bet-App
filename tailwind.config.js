@@ -9,7 +9,7 @@ export default {
 				'primary-light': '#21243A',
 				secondary: '#0085BE',
 				'secondary-light': '#00A4EA',
-				'gray-light': '#B9A9A',
+				'grey-light': '#B9A9A',
 			},
 			width: {
 				aside: '12%',

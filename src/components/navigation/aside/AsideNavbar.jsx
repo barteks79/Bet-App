@@ -9,12 +9,16 @@ export default function AsideNavbar() {
 	};
 
 	return (
-		<aside className="flex flex-col h-svh w-aside bg-primary-light text-white">
+		<aside className="flex flex-col h-svh w-aside bg-primary-light text-white shadow-xl">
 			<h1 className="text-center py-8">Logo</h1>
-			<section className="self-center w-aside-wrapper py-5 ">
+			<section className="py-5">
 				<ul className="flex flex-col gap-5">
-					<AsideCategory icon={icons.leagues}>Leagues</AsideCategory>
-					<AsideCategory icon={icons.countries}>Countries</AsideCategory>
+					<AsideCategory icon={icons.leagues} isOpen={true}>
+						Leagues
+					</AsideCategory>
+					<AsideCategory icon={icons.countries} isOpen={true}>
+						Countries
+					</AsideCategory>
 				</ul>
 			</section>
 		</aside>
