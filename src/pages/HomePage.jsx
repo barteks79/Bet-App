@@ -1,4 +1,4 @@
-import GamesContainer from '../components/main/GamesContainer';
+import GamesContainer from '../components/main/lives/GamesContainer';
 
 function HomePage() {
 	return (
