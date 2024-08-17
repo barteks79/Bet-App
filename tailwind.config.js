@@ -9,11 +9,18 @@ export default {
 				'primary-light': '#21243A',
 				secondary: '#0085BE',
 				'secondary-light': '#00A4EA',
-				'grey-light': '#B9A9A',
+				'grey-light': '#A6A6A6',
 			},
 			width: {
 				aside: '12%',
 				'aside-wrapper': '75%',
+			},
+			fontFamily: {
+				inter: ['Inter', 'sans-serif'],
+				mulish: ['Mulish', 'sans-serif'],
+			},
+			boxShadow: {
+				aside: '0 0 10px rgba(0,0,0, .3)',
 			},
 		},
 	},
