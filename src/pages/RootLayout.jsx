@@ -9,7 +9,7 @@ function RootLayout() {
 			<AsideNavbar />
 			<main className="w-main">
 				<TopNavbar />
-				<section>
+				<section className="flex justify-center w-main-wrapper py-16">
 					<Outlet />
 				</section>
 			</main>

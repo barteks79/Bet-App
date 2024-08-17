@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { useDispatch, useSelector } from 'react-redux';
 import { uiActions } from '../../../store/uiSlice';
 import { isDropdownOpen } from '../../../util/helpers';

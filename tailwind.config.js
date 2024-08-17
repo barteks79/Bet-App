@@ -15,6 +15,7 @@ export default {
 				aside: '12%',
 				main: '88%',
 				wrapper: '75%',
+				'main-wrapper': '90%',
 			},
 			fontFamily: {
 				inter: ['Inter', 'sans-serif'],

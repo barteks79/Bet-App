@@ -12,7 +12,7 @@ function TopNavbar() {
 					<NavItem>My Bets</NavItem>
 				</ul>
 				<ul className="flex items-center gap-8 font-inter text-2xl h-4/6 border-r border-grey-light px-16">
-					<CircleItem icon={faMagnifyingGlass} />
+					<CircleItem primary icon={faMagnifyingGlass} />
 					<CircleItem icon={faWallet}>Deposit</CircleItem>
 					<NavItem>$2568.19</NavItem>
 				</ul>
