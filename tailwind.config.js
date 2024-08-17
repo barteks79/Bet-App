@@ -23,6 +23,8 @@ export default {
 			boxShadow: {
 				aside: '0 0 10px rgba(0,0,0, .3)',
 				navbar: '0 0 5px rgba(0,0,0, .3)',
+				circle: '0 0 2px rgba(255, 255, 255, .5)',
+				'circle-lighter': '0 0 5px rgba(255, 255, 255, .5)',
 			},
 		},
 	},

@@ -1,4 +1,6 @@
+import { faMagnifyingGlass, faWallet /*faRightFromBracket*/ } from '@fortawesome/free-solid-svg-icons';
 import NavItem from './NavItem';
+import CircleItem from './CircleItem';
 
 function TopNavbar() {
 	return (
@@ -10,16 +12,16 @@ function TopNavbar() {
 					<NavItem>My Bets</NavItem>
 				</ul>
 				<ul className="flex items-center gap-8 font-inter text-2xl h-4/6 border-r border-grey-light px-16">
-					<NavItem>Search</NavItem>
-					<NavItem>Deposit</NavItem>
+					<CircleItem icon={faMagnifyingGlass} />
+					<CircleItem icon={faWallet}>Deposit</CircleItem>
 					<NavItem>$2568.19</NavItem>
 				</ul>
 			</div>
-			{/* <div className="flex justify-center items-center w-[22%]">
+			{/* <div className="flex justify-center items-center w-[15%]">
 				<ul className="flex justify-between w-full items-center text-grey-light text-2xl">
-					<NavItem>Login</NavItem>
-					<NavItem>Sign Up</NavItem>
 					<NavItem>Dashboard</NavItem>
+					<NavItem>Login</NavItem>
+					<CircleItem icon={faRightFromBracket}>Sign Out</CircleItem>
 				</ul>
 			</div> */}
 		</nav>
