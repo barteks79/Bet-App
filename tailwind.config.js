@@ -13,7 +13,8 @@ export default {
 			},
 			width: {
 				aside: '12%',
-				'aside-wrapper': '75%',
+				main: '88%',
+				wrapper: '75%',
 			},
 			fontFamily: {
 				inter: ['Inter', 'sans-serif'],
@@ -21,6 +22,7 @@ export default {
 			},
 			boxShadow: {
 				aside: '0 0 10px rgba(0,0,0, .3)',
+				navbar: '0 0 5px rgba(0,0,0, .3)',
 			},
 		},
 	},

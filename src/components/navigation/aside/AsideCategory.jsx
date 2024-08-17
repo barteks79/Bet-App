@@ -20,11 +20,11 @@ function AsideCategory({ icon, children }) {
 	};
 
 	return (
-		<li className="flex flex-col items-start gap-5 text-xl">
+		<li className="flex flex-col items-center gap-5 text-xl">
 			<button
 				onClick={openDropdownHandler}
-				className={`flex self-center items-center justify-between text-grey-light w-aside-wrapper ${
-					isCategoryOpen && 'text-white'
+				className={`flex items-center justify-between w-wrapper hover:text-white transition-colors duration-150 ${
+					isCategoryOpen ? 'text-white' : 'text-grey-light'
 				}`}>
 				<p className="flex items-center gap-5">
 					{icon}

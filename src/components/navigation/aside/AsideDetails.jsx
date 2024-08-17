@@ -9,7 +9,7 @@ function AsideDetails({ isOpen }) {
 	return (
 		// add dynamic max-height depending on data length
 		<ul className={`flex flex-col gap-5 w-full bg-primary text-xl ${isOpen && 'py-5 max-h-20'} ${styles.dropdown}`}>
-			<li className="flex w-aside-wrapper justify-center items-center gap-5">
+			<li className="flex w-wrapper justify-center items-center gap-5">
 				<img src="https://media.api-sports.io/football/leagues/88.png" className="w-10" />
 				<NavLink>{category}</NavLink>
 			</li>

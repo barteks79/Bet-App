@@ -7,7 +7,7 @@ function RootLayout() {
 	return (
 		<>
 			<AsideNavbar />
-			<main>
+			<main className="w-main">
 				<TopNavbar />
 				<section>
 					<Outlet />
