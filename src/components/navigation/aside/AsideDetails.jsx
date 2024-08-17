@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import styles from './Animations.module.css';
 
 function AsideDetails({ isOpen }) {
-	const category = useSelector(state => state.ui.openDropdown);
+	const category = useSelector(state => state.ui.openedDropdown);
 
 	return (
 		// add dynamic max-height depending on data length
