@@ -16,7 +16,7 @@ function GamesContainer() {
 					<FontAwesomeIcon icon={faRightToBracket} />
 				</Link>
 			</section>
-			<section className="flex w-live-wrapper gap-6 pb-10">
+			<section className="flex flex-wrap justify-center w-live-wrapper gap-10 pb-10">
 				<GameCard />
 				<GameCard />
 				<GameCard />

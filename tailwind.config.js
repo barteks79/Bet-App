@@ -17,7 +17,7 @@ export default {
 				wrapper: '75%',
 				'main-wrapper': '92.5%',
 				'live-wrapper': '95%',
-				'game-card': '24%', // calculations
+				'game-card': '25%', // calculations
 			},
 			fontFamily: {
 				inter: ['Inter', 'sans-serif'],
