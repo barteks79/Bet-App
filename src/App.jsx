@@ -4,7 +4,6 @@ import { queryClient } from './util/http';
 
 import RootLayout from './pages/RootLayout';
 import HomePage from './pages/HomePage';
-import ErrorPage from './pages/ErrorPage';
 
 function App() {
 	const router = createBrowserRouter([
