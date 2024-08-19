@@ -8,6 +8,7 @@ function GamesContainer() {
 	const { data } = useQuery({
 		queryKey: ['live', 'fixtures'],
 		queryFn: () => fetchLiveFixtures({ limit: 4 }),
+		stealTime: 1000,
 	});
 
 	console.log('GamesContainer: ', data);
