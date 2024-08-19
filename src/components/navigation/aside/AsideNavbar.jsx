@@ -1,69 +1,13 @@
-import { categoryActions } from '../../../store/categorySlice';
-import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPersonRunning, faEarthAmericas } from '@fortawesome/free-solid-svg-icons';
 import AsideCategory from './AsideCategory';
 
 function AsideNavbar() {
-	const dispatch = useDispatch();
-
 	const icons = {
 		leagues: <FontAwesomeIcon icon={faPersonRunning} />,
 		countries: <FontAwesomeIcon icon={faEarthAmericas} />,
 	};
-
-	const leagues = [
-		{
-			league: {
-				id: 1,
-				name: 'Champions League',
-				logo: 'https://upload.wikimedia.org/wikipedia/pt/9/98/Real_Madrid.png',
-			},
-		},
-		{
-			league: {
-				id: 2,
-				name: 'Premiere League',
-				logo: 'https://upload.wikimedia.org/wikipedia/pt/9/98/Real_Madrid.png',
-			},
-		},
-		{
-			league: {
-				id: 3,
-				name: 'Premiere League',
-				logo: 'https://upload.wikimedia.org/wikipedia/pt/9/98/Real_Madrid.png',
-			},
-		},
-		{
-			league: {
-				id: 4,
-				name: 'Premiere League',
-				logo: 'https://upload.wikimedia.org/wikipedia/pt/9/98/Real_Madrid.png',
-			},
-		},
-	];
-
-	const countries = [
-		{
-			code: 'AL',
-			flag: 'https://media.api-sports.io/flags/al.svg',
-			name: 'Albania',
-		},
-		{
-			code: 'DZ',
-			flag: 'https://media.api-sports.io/flags/al.svg',
-			name: 'Algeria',
-		},
-	];
-
-	const saveCategories = () => {
-		dispatch(categoryActions.saveLeagues(leagues));
-		dispatch(categoryActions.saveCountries(countries));
-		console.log('dispatched');
-	};
-
-	saveCategories();
 
 	return (
 		<aside className="flex flex-col h-svh w-aside bg-primary-light shadow-aside font-inter z-0">
@@ -81,3 +25,47 @@ function AsideNavbar() {
 }
 
 export default AsideNavbar;
+
+// const leagues = [
+// 	{
+// 		league: {
+// 			id: 1,
+// 			name: 'Champions League',
+// 			logo: 'https://upload.wikimedia.org/wikipedia/pt/9/98/Real_Madrid.png',
+// 		},
+// 	},
+// 	{
+// 		league: {
+// 			id: 2,
+// 			name: 'Premiere League',
+// 			logo: 'https://upload.wikimedia.org/wikipedia/pt/9/98/Real_Madrid.png',
+// 		},
+// 	},
+// 	{
+// 		league: {
+// 			id: 3,
+// 			name: 'Premiere League',
+// 			logo: 'https://upload.wikimedia.org/wikipedia/pt/9/98/Real_Madrid.png',
+// 		},
+// 	},
+// 	{
+// 		league: {
+// 			id: 4,
+// 			name: 'Premiere League',
+// 			logo: 'https://upload.wikimedia.org/wikipedia/pt/9/98/Real_Madrid.png',
+// 		},
+// 	},
+// ];
+
+// const countries = [
+// 	{
+// 		code: 'AL',
+// 		flag: 'https://media.api-sports.io/flags/al.svg',
+// 		name: 'Albania',
+// 	},
+// 	{
+// 		code: 'DZ',
+// 		flag: 'https://media.api-sports.io/flags/al.svg',
+// 		name: 'Algeria',
+// 	},
+// ];

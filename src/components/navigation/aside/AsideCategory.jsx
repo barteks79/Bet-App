@@ -1,8 +1,6 @@
-// import { useQuery } from '@tanstack/react-query';
 import { useDispatch, useSelector } from 'react-redux';
 import { uiActions } from '../../../store/uiSlice';
 import { isDropdownOpen } from '../../../util/helpers';
-// import { fetchAsideData } from '../../../util/http';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
