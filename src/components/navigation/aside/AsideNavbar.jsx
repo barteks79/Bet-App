@@ -14,12 +14,12 @@ function AsideNavbar() {
 
 	// const { data: leagues } = useQuery({
 	// 	queryKey: ['aside', 'leagues'],
-	// 	queryFn: () => fetchAsideData({ category: 'leagues' }),
+	// 	queryFn: () => fetchAsideData({ category: 'leagues', limit: 5 }),
 	// });
 
 	// const { data: countries } = useQuery({
 	// 	queryKey: ['aside', 'countries'],
-	// 	queryFn: () => fetchAsideData({ category: 'countries' }),
+	// 	queryFn: () => fetchAsideData({ category: 'countries', limit: 5 }),
 	// });
 
 	const leagues = [

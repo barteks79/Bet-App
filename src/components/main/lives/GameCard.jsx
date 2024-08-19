@@ -5,24 +5,22 @@ import OddsSection from '../../UI/OddsSection';
 import TeamSection from '../../UI/TeamsSection';
 import LeagueSection from '../../UI/LeagueSection';
 
-function GameCard({ gameId }) {
+function GameCard({ fixture }) {
+	const fulltimeBet = fixture.odds.find(bet => bet.id === 59);
+
 	return (
 		<Link className="flex flex-col gap-5 bg-primary-light rounded-md shadow-navbar">
-			<LeagueSection league="UEFA Champions League">Live '1</LeagueSection>
+			<LeagueSection leagueId={fixture.league.id}>Live '{fixture.fixture.status.elapsed}</LeagueSection>
 
 			<TeamSection>
-				<TeamCard team="Real Madrid" image="https://upload.wikimedia.org/wikipedia/pt/9/98/Real_Madrid.png" score={3} />
-				<TeamCard
-					team="Herta Berlin"
-					image="https://upload.wikimedia.org/wikipedia/commons/8/81/Hertha_BSC_Logo_2012.svg"
-					score={1}
-				/>
+				<TeamCard id={fixture.teams.home.id} goals={fixture.teams.home.goals} />
+				<TeamCard id={fixture.teams.away.id} goals={fixture.teams.away.goals} />
 			</TeamSection>
 
 			<OddsSection>
-				<OddsButton bet="Real Madrid" odds="1.32" />
-				<OddsButton bet="Draw" odds="2.23" />
-				<OddsButton bet="Herta Berlin" odds="4.23" />
+				{fulltimeBet.values.map(value => {
+					return <OddsButton key={value.odd} bet={value.value} odds={value.odd} />;
+				})}
 			</OddsSection>
 		</Link>
 	);
