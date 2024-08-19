@@ -7,7 +7,7 @@ import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import AsideDetails from './AsideDetails';
 import styles from './Animations.module.css';
 
-function AsideCategory({ icon, children }) {
+function AsideCategory({ data, icon, children }) {
 	const dispatch = useDispatch();
 	const openedCategory = useSelector(state => state.ui.openedDropdown);
 
@@ -31,7 +31,7 @@ function AsideCategory({ icon, children }) {
 				</p>
 				<FontAwesomeIcon icon={faChevronUp} rotation={isCategoryOpen ? 180 : 0} className={styles.chevron} />
 			</button>
-			<AsideDetails isOpen={isCategoryOpen} />
+			<AsideDetails data={data} category={category} isOpen={isCategoryOpen} />
 		</li>
 	);
 }
