@@ -1,17 +1,21 @@
 import { useSelector } from 'react-redux';
-import { NavLink } from 'react-router-dom';
+import { isDropdownOpen } from '../../../util/helpers';
 import styles from './Animations.module.css';
+import AsideDetail from './AsideDetail';
 
 function AsideDetails({ isOpen }) {
 	const category = useSelector(state => state.ui.openedDropdown);
+	const { leagues, countries } = useSelector(state => state.category);
+	const isLeague = isDropdownOpen(category, 'leagues');
+	const isCountry = isDropdownOpen(category, 'countries');
 
 	return (
-		// add dynamic max-height depending on data length
-		<ul className={`flex flex-col gap-5 w-full bg-primary text-xl ${isOpen && 'py-5 max-h-20'} ${styles.dropdown}`}>
-			<li className="flex w-wrapper justify-center items-center gap-5">
-				<img src="https://media.api-sports.io/football/leagues/88.png" className="w-10" />
-				<NavLink>{category}</NavLink>
-			</li>
+		<ul
+			className={`flex flex-col items-center gap-5 w-full bg-primary text-xl ${isOpen && `py-5 max-h-80`} ${
+				styles.dropdown
+			}`}>
+			{isCountry && !isLeague && countries.map(list => <AsideDetail key={list.code} data={list} isCountry />)}
+			{!isCountry && isLeague && leagues.map(list => <AsideDetail key={list.league.id} data={list.league} isLeague />)}
 		</ul>
 	);
 }

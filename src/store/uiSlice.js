@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-	openedDropdown: '',
+	openedDropdown: 'leagues',
 };
 
 const slice = createSlice({
