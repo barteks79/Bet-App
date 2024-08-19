@@ -5,7 +5,7 @@ import OddsSection from '../../UI/OddsSection';
 import TeamSection from '../../UI/TeamsSection';
 import LeagueSection from '../../UI/LeagueSection';
 
-function GameCard() {
+function GameCard({ gameId }) {
 	return (
 		<Link className="flex flex-col gap-5 bg-primary-light rounded-md shadow-navbar">
 			<LeagueSection league="UEFA Champions League">Live '1</LeagueSection>
