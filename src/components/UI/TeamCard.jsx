@@ -6,6 +6,7 @@ function TeamCard({ id, goals }) {
 		queryKey: ['teams', id],
 		queryFn: () => fetchById({ category: 'teams', id }),
 		stealTime: 60000,
+		gcTime: 60000,
 	});
 
 	return (
