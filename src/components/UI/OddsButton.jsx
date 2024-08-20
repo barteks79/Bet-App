@@ -11,8 +11,6 @@ function OddsButton({ fixtureId, value, bet, odds }) {
 	};
 
 	const removeBetHandler = () => {
-		console.log(fixtureId, value.toString());
-		console.log(bets);
 		dispatch(betsActions.removeBet({ fixtureId, value }));
 	};
 

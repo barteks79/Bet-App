@@ -15,8 +15,8 @@ const slice = createSlice({
 			}
 		},
 		removeBet(state, action) {
-			// state.filter(bet => bet.fixtureId !== action.payload.fixtureId || bet.value !== action.payload.value);
-			state.pop();
+			const idx = state.findIndex(bet => bet.fixtureId === action.payload.fixtureId);
+			state.splice(idx, 1);
 		},
 	},
 });

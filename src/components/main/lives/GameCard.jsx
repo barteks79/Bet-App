@@ -23,7 +23,7 @@ function GameCard({ fixture }) {
 					return (
 						<OddsButton
 							fixtureId={fixture.fixture.id}
-							key={value.odd}
+							key={oddKey}
 							bet={fulltimeBet.name}
 							value={value.value}
 							odds={+value.odd}

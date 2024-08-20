@@ -14,7 +14,7 @@ function LeagueSection({ id, children }) {
 				{data && <img src={data.league.logo} className="w-[20px]" />}
 				{data && <p className="text-base">{data.league.name}</p>}
 			</div>
-			<p className="px-4 py-1 bg-secondary rounded-lg">{children}</p>
+			<p className="px-4 py-1 bg-secondary rounded-lg text-base">{children}</p>
 		</section>
 	);
 }
