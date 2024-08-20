@@ -23,7 +23,7 @@ function AsideNavbar() {
 	});
 
 	return (
-		<aside className="flex flex-col h-svh w-aside bg-primary-light shadow-aside font-inter z-0">
+		<aside className="flex flex-col h-full w-aside bg-primary-light shadow-aside font-inter z-0">
 			<Link to="/">
 				<h1 className="text-3xl text-center py-8 text-white font-semibold font-mulish">Logo</h1>
 			</Link>

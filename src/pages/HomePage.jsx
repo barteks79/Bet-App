@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import { fetchLiveFixtures, fetchTodaysFixtures } from '../util/http';
-
+import { getTomorrowDate } from '../util/helpers';
 import HomeContainer from '../components/main/lives/HomeContainer';
 
 function HomePage() {
@@ -13,7 +13,7 @@ function HomePage() {
 
 	const { data: upcomingData } = useQuery({
 		queryKey: ['upcoming', 'fixtures'],
-		queryFn: () => fetchTodaysFixtures({ page: 1, betId: 1 }),
+		queryFn: () => fetchTodaysFixtures({ date: getTomorrowDate(), page: 1, betId: 1 }),
 		stealTime: 60000,
 		refetchInterval: 60000,
 	});
@@ -41,7 +41,7 @@ function HomePage() {
 	return (
 		<>
 			<HomeContainer data={liveData} label="Live Matches" href="/live" />
-			<HomeContainer data={[]} label="Upcoming Matches" href="/upcoming" />
+			<HomeContainer data={upcomingData} label="Upcoming Matches" href="/upcoming" />
 		</>
 	);
 }
