@@ -19,7 +19,16 @@ function GameCard({ fixture }) {
 
 			<OddsSection>
 				{fulltimeBet.values.map(value => {
-					return <OddsButton key={value.odd} bet={value.value} odds={+value.odd} />;
+					const oddKey = +value.odd * Math.random();
+					return (
+						<OddsButton
+							fixtureId={fixture.fixture.id}
+							key={value.odd}
+							bet={fulltimeBet.name}
+							value={value.value}
+							odds={+value.odd}
+						/>
+					);
 				})}
 			</OddsSection>
 		</Link>

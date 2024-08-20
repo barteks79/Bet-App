@@ -1,15 +1,22 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = {
-	bets: [],
-};
+const initialState = [];
 
 const slice = createSlice({
 	name: 'bets',
 	initialState,
 	reducers: {
-		addBet(state, action) {
-			state.bets.push(action.payload);
+		saveBet(state, action) {
+			const prevIdx = state.findIndex(bet => bet.fixtureId === action.payload.fixtureId);
+			if (prevIdx !== -1) {
+				state[prevIdx] = action.payload;
+			} else {
+				state.push(action.payload);
+			}
+		},
+		removeBet(state, action) {
+			// state.filter(bet => bet.fixtureId !== action.payload.fixtureId || bet.value !== action.payload.value);
+			state.pop();
 		},
 	},
 });
