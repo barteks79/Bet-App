@@ -4,7 +4,7 @@ import CircleItem from './CircleItem';
 
 function TopNavbar() {
 	return (
-		<nav className="flex w-full h-28 bg-primary shadow-navbar">
+		<nav className="flex w-full fixed z-0 h-28 bg-primary shadow-navbar">
 			<div className="flex justify-between items-center w-wrapper px-20">
 				<ul className="flex items-center gap-8 font-inter text-2xl h-3/4">
 					<NavItem>Live</NavItem>

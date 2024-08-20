@@ -15,6 +15,7 @@ function AsideNavbar() {
 	const { data: leagues } = useQuery({
 		queryKey: ['aside', 'leagues'],
 		queryFn: () => fetchAsideData({ category: 'leagues', limit: 5 }),
+		gcTime: 1000 * 60 * 60 * 24,
 	});
 
 	const { data: countries } = useQuery({
@@ -23,7 +24,7 @@ function AsideNavbar() {
 	});
 
 	return (
-		<aside className="flex flex-col h-full w-aside bg-primary-light shadow-aside font-inter z-0">
+		<aside className="flex flex-col sticky top-0 min-w-[250px] w-aside bg-primary-light shadow-aside font-inter z-10">
 			<Link to="/">
 				<h1 className="text-3xl text-center py-8 text-white font-semibold font-mulish">Logo</h1>
 			</Link>

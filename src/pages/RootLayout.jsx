@@ -9,7 +9,7 @@ function RootLayout() {
 			<AsideNavbar />
 			<main className="w-main">
 				<TopNavbar />
-				<section className="flex flex-col items-center py-20 gap-20">
+				<section className="flex flex-col items-center py-20 gap-20 mt-28">
 					<Outlet />
 				</section>
 			</main>

@@ -13,12 +13,15 @@ function UpcomingCard({ fixture, fixtureId }) {
 	const { data } = useQuery({
 		queryKey: ['fixtures', fixtureId],
 		queryFn: () => fetchById({ category: 'fixtures', id: fixtureId }),
+		staleTime: 30000,
 	});
+
+	console.log(fixtureId, data);
 
 	const betData = fixture.bookmakers[0].bets[0];
 
 	return (
-		<Link className="flex flex-col flex-1 gap-5 bg-primary-light rounded-md shadow-navbar">
+		<Link className="flex flex-col basis-1/4 flex-grow flex-shrink gap-5 bg-primary-light rounded-md shadow-navbar">
 			<LeagueSection id={fixture.league.id}>{getHoursFromISO(fixture.fixture.date)}</LeagueSection>
 
 			{data && (
