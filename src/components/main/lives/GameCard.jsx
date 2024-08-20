@@ -9,7 +9,7 @@ function GameCard({ fixture }) {
 	const fulltimeBet = fixture.odds.find(bet => bet.id === 59);
 
 	return (
-		<Link className="flex flex-col gap-5 bg-primary-light rounded-md shadow-navbar">
+		<Link className="flex flex-col flex-1 gap-5 bg-primary-light rounded-md shadow-navbar">
 			<LeagueSection id={fixture.league.id}>Live '{fixture.fixture.status.elapsed}</LeagueSection>
 
 			<TeamSection>

@@ -5,10 +5,13 @@ import GameCard from './GameCard';
 import ContainerLabels from './ContainerLabels';
 
 function GamesContainer() {
+	// const bestLeaguesIds = [1, 2, 39, 140, 135, 61, 78, 88, 94, 203];
+
 	const { data } = useQuery({
 		queryKey: ['live', 'fixtures'],
 		queryFn: () => fetchLiveFixtures({ limit: 4 }),
-		stealTime: 1000,
+		stealTime: 30000,
+		refetchInterval: 30000,
 	});
 
 	console.log('GamesContainer: ', data);

@@ -5,7 +5,7 @@ function TeamCard({ id, goals }) {
 	const { data } = useQuery({
 		queryKey: ['teams', id],
 		queryFn: () => fetchById({ category: 'teams', id }),
-		stealTime: 1000,
+		stealTime: 60000,
 	});
 
 	return (
