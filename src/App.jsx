@@ -6,6 +6,7 @@ import RootLayout from './pages/RootLayout';
 import HomePage from './pages/HomePage';
 import LivePage from './pages/LivePage';
 import BetsPage from './pages/BetsPage';
+import CategoryPage from './pages/CategoryPage';
 
 function App() {
 	const router = createBrowserRouter([
@@ -24,6 +25,14 @@ function App() {
 				{
 					path: '/bets',
 					element: <BetsPage />,
+				},
+				{
+					path: '/leagues',
+					element: <CategoryPage />,
+				},
+				{
+					path: '/countries',
+					element: <CategoryPage />,
 				},
 			],
 		},

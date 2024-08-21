@@ -6,14 +6,14 @@ function AsideDetail({ data, category }) {
 			{category === 'leagues' && (
 				<>
 					<img src={data.league.logo} className="w-[20px]" />
-					<NavLink>{data.league.name}</NavLink>
+					<NavLink to={`${category}?id=${data.league.id}`}>{data.league.name}</NavLink>
 				</>
 			)}
 
 			{category === 'countries' && (
 				<>
 					<img src={data.flag} className="w-[20px]" />
-					<NavLink>{data.name}</NavLink>
+					<NavLink to={`${category}?code=${data.code}`}>{data.name}</NavLink>
 				</>
 			)}
 		</li>
