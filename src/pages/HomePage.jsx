@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import { fetchLiveFixtures, fetchTodaysFixtures } from '../util/http';
 import { getTomorrowDate } from '../util/helpers';
-import HomeContainer from '../components/main/lives/HomeContainer';
+import HomeContainer from '../components/main/live/HomeContainer';
 
 function HomePage() {
 	const { data: liveData } = useQuery({
@@ -18,23 +18,6 @@ function HomePage() {
 		refetchInterval: 60000,
 	});
 
-	// upcomingData: [{
-	// 		fixture: { id: 38432432 }
-	//      bookmakers: [{
-	// 			bets: [
-	// 				{
-	// 					id: 1,
-	// 					name: 'Match Winner',
-	// 					values: [
-	//                      { value: 'Home', odd: 1.5 },
-	//                      { value: 'Draw', odd: 1.5 },
-	//                      { value: 'Away', odd: 1.5 },
-	//                    ]
-	// 				}
-	// 			]
-	// 		}]
-	// }]
-
 	console.log('LiveMatches: ', liveData);
 	console.log('UpcomingMatches: ', upcomingData);
 
@@ -47,3 +30,20 @@ function HomePage() {
 }
 
 export default HomePage;
+
+// upcomingData: [{
+// 		fixture: { id: 38432432 }
+//      bookmakers: [{
+// 			bets: [
+// 				{
+// 					id: 1,
+// 					name: 'Match Winner',
+// 					values: [
+//                      { value: 'Home', odd: 1.5 },
+//                      { value: 'Draw', odd: 1.5 },
+//                      { value: 'Away', odd: 1.5 },
+//                    ]
+// 				}
+// 			]
+// 		}]
+// }]

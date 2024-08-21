@@ -4,6 +4,7 @@ import { queryClient } from './util/http';
 
 import RootLayout from './pages/RootLayout';
 import HomePage from './pages/HomePage';
+import LivePage from './pages/LivePage';
 
 function App() {
 	const router = createBrowserRouter([
@@ -14,6 +15,10 @@ function App() {
 				{
 					index: true,
 					element: <HomePage />,
+				},
+				{
+					path: '/live',
+					element: <LivePage />,
 				},
 			],
 		},

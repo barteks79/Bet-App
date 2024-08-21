@@ -21,6 +21,7 @@ function AsideNavbar() {
 	const { data: countries } = useQuery({
 		queryKey: ['aside', 'countries'],
 		queryFn: () => fetchAsideData({ category: 'countries', limit: 5 }),
+		gcTime: 1000 * 60 * 60 * 24,
 	});
 
 	return (

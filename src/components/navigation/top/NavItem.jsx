@@ -6,7 +6,7 @@ function NavItem({ href, children }) {
 			<NavLink
 				to={href}
 				className={`text-grey-light hover:text-white transition-colors duration-150 ${({ isActive }) =>
-					isActive && 'text-white'}`}>
+					isActive ? 'text-white' : ''}`}>
 				{children}
 			</NavLink>
 		</li>
