@@ -23,3 +23,10 @@ React Router
 Redux/Redux Toolkit
 Tanstack Query
 TailwindCSS
+
+# Installation
+
+# Usage
+
+Put your API KEY into apiKey.env.example.
+You can get it for free on https://rapidapi.com/api-sports/api/api-football
