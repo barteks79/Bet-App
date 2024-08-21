@@ -8,8 +8,8 @@ function TopNavbar() {
 			<div className="flex justify-between items-center w-wrapper px-20">
 				<ul className="flex items-center gap-8 font-inter text-2xl h-3/4">
 					<NavItem href="/live">Live</NavItem>
-					<NavItem>Favorite</NavItem>
-					<NavItem>My Bets</NavItem>
+					<NavItem href="/favorite">Favorite</NavItem>
+					<NavItem href="/bets">My Bets</NavItem>
 				</ul>
 				<ul className="flex items-center gap-8 font-inter text-2xl h-4/6 border-r border-grey-light px-16">
 					<CircleItem primary icon={faMagnifyingGlass} />
