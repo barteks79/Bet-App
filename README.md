@@ -26,6 +26,11 @@ TailwindCSS
 
 # Installation
 
+$ git clone https://github.com/barteks79/Bet-App
+$ cd 'Bet-App'
+$ npm install
+$ npm run dev
+
 # Usage
 
 Put your API KEY into apiKey.env.example.
