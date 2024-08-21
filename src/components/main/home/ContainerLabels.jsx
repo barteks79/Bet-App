@@ -15,10 +15,12 @@ function ContainerLabels({ label, href, leagueId }) {
 				)}
 				<p>{leagueId ? leagueId.name : label}</p>
 			</div>
-			<Link className="flex items-center gap-4 py-8 px-10" to={leagueId ? leagueId.slug : href}>
-				<p>More Games</p>
-				<FontAwesomeIcon icon={faRightToBracket} />
-			</Link>
+			{href && (
+				<Link className="flex items-center gap-4 py-8 px-10" to={leagueId ? leagueId.slug : href}>
+					<p>More Games</p>
+					<FontAwesomeIcon icon={faRightToBracket} />
+				</Link>
+			)}
 		</section>
 	);
 }

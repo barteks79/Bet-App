@@ -7,8 +7,8 @@ function TopNavbar() {
 		<nav className="flex w-full fixed z-0 h-28 bg-primary shadow-navbar">
 			<div className="flex justify-between items-center w-wrapper px-20">
 				<ul className="flex items-center gap-8 font-inter text-2xl h-3/4">
+					<NavItem href="/">Home</NavItem>
 					<NavItem href="/live">Live</NavItem>
-					<NavItem href="/favorite">Favorite</NavItem>
 					<NavItem href="/bets">My Bets</NavItem>
 				</ul>
 				<ul className="flex items-center gap-8 font-inter text-2xl h-4/6 border-r border-grey-light px-16">

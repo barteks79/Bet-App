@@ -1,5 +1,7 @@
+import InTheFutureText from '../components/UI/InTheFutureText';
+
 function BetsPage() {
-	return;
+	return <InTheFutureText />;
 }
 
 export default BetsPage;
