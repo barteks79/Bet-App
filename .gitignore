@@ -11,7 +11,7 @@ node_modules
 dist
 dist-ssr
 *.local
-src/util/http.js
+apiKey.env
 
 # Editor directories and files
 .vscode/*
