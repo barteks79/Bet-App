@@ -1,10 +1,11 @@
 import LiveCard from '../live/LiveCard';
 import UpcomingCard from './UpcomingCard';
 import ContainerLabels from './ContainerLabels';
+import MainWrapper from '../../wrappers/MainWrapper';
 
 function HomeContainer({ data, label, href }) {
 	return (
-		<div className="flex flex-col w-main-wrapper items-center bg-primary shadow-aside rounded-xl">
+		<MainWrapper>
 			<ContainerLabels label={label} href={href} />
 			<section className="flex flex-wrap w-live-wrapper gap-10 pb-10">
 				{data &&
@@ -17,7 +18,7 @@ function HomeContainer({ data, label, href }) {
 						}
 					})}
 			</section>
-		</div>
+		</MainWrapper>
 	);
 }
 

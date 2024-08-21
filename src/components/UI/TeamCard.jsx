@@ -24,7 +24,7 @@ function TeamCard({ id, goals, enabled = true, teamData }) {
 					<p>{teamData.name}</p>
 				</div>
 			)}
-			<p>{goals}</p>
+			<p className="px-3">{goals}</p>
 		</div>
 	);
 }

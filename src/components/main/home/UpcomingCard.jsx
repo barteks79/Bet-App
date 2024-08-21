@@ -2,7 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import { fetchById } from '../../../util/http';
 import { getHoursFromISO } from '../../../util/helpers';
 
-import { Link } from 'react-router-dom';
+import CardLink from '../../wrappers/CardLink';
 import TeamCard from '../../UI/TeamCard';
 import OddsButton from '../../UI/OddsButton';
 import OddsSection from '../../UI/OddsSection';
@@ -21,7 +21,7 @@ function UpcomingCard({ fixture, fixtureId }) {
 	const betData = fixture.bookmakers[0].bets[0];
 
 	return (
-		<Link className="flex flex-col basis-1/4 flex-grow flex-shrink gap-5 bg-primary-light rounded-md shadow-navbar">
+		<CardLink>
 			<LeagueSection id={fixture.league.id}>{getHoursFromISO(fixture.fixture.date)}</LeagueSection>
 
 			{data && (
@@ -37,7 +37,7 @@ function UpcomingCard({ fixture, fixtureId }) {
 					return <OddsButton fixtureId={fixtureId} key={oddKey} bet={betData.name} value={value.value} odds={+value.odd} />;
 				})}
 			</OddsSection>
-		</Link>
+		</CardLink>
 	);
 }
 

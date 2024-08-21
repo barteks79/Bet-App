@@ -1,5 +1,11 @@
+import LiveLeagues from '../components/main/live/LiveLeagues';
+
 function LivePage() {
-	return;
+	return (
+		<>
+			<LiveLeagues />
+		</>
+	);
 }
 
 export default LivePage;

@@ -1,16 +1,18 @@
-import { Link } from 'react-router-dom';
+import CardLink from '../../wrappers/CardLink';
 import TeamCard from '../../UI/TeamCard';
 import OddsButton from '../../UI/OddsButton';
 import OddsSection from '../../UI/OddsSection';
 import TeamSection from '../../UI/TeamsSection';
 import LeagueSection from '../../UI/LeagueSection';
 
-function LiveCard({ fixture }) {
+function LiveCard({ fixture, isLivePage }) {
 	const fulltimeBet = fixture.odds.find(bet => bet.id === 59);
 
 	return (
-		<Link className="flex flex-col flex-1 gap-5 bg-primary-light rounded-md shadow-navbar">
-			<LeagueSection id={fixture.league.id}>Live '{fixture.fixture.status.elapsed}</LeagueSection>
+		<CardLink>
+			<LeagueSection isLivePage={isLivePage && isLivePage} id={fixture.league.id} red>
+				Live '{fixture.fixture.status.elapsed}
+			</LeagueSection>
 
 			<TeamSection>
 				<TeamCard id={fixture.teams.home.id} goals={fixture.teams.home.goals} />
@@ -31,7 +33,7 @@ function LiveCard({ fixture }) {
 					);
 				})}
 			</OddsSection>
-		</Link>
+		</CardLink>
 	);
 }
 
