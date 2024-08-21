@@ -6,9 +6,9 @@ function AsideDetails({ data, category, isOpen }) {
 
 	return (
 		<ul
-			className={`flex flex-col items-center gap-5 w-full bg-primary text-xl ${isOpen && 'py-5 max-h-[400px]'} ${
-				styles.dropdown
-			}`}>
+			className={`flex flex-col items-center gap-5 w-full bg-primary text-lg font-light text-grey-light ${
+				isOpen && 'py-5 max-h-[400px]'
+			} ${styles.dropdown}`}>
 			{data.map(item => (
 				<AsideDetail key={isLeague ? item.league.id : item.code} data={item} category={category} />
 			))}
