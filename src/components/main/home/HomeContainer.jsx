@@ -1,4 +1,4 @@
-import LiveCard from './LiveCard';
+import LiveCard from '../live/LiveCard';
 import UpcomingCard from './UpcomingCard';
 import ContainerLabels from './ContainerLabels';
 

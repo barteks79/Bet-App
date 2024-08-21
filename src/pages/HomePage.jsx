@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import { fetchLiveFixtures, fetchTodaysFixtures } from '../util/http';
 import { getTomorrowDate } from '../util/helpers';
-import HomeContainer from '../components/main/live/HomeContainer';
+import HomeContainer from '../components/main/home/HomeContainer';
 
 function HomePage() {
 	const { data: liveData } = useQuery({
