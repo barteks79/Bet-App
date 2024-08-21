@@ -5,6 +5,7 @@ import { queryClient } from './util/http';
 import RootLayout from './pages/RootLayout';
 import HomePage from './pages/HomePage';
 import LivePage from './pages/LivePage';
+import BetsPage from './pages/BetsPage';
 
 function App() {
 	const router = createBrowserRouter([
@@ -19,6 +20,10 @@ function App() {
 				{
 					path: '/live',
 					element: <LivePage />,
+				},
+				{
+					path: '/bets',
+					element: <BetsPage />,
 				},
 			],
 		},

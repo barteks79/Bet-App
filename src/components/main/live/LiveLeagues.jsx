@@ -1,3 +1,6 @@
+import { useQuery } from '@tanstack/react-query';
+import { fetchLiveFixtures } from '../../../util/http';
+
 import MainWrapper from '../../wrappers/MainWrapper';
 import ContainerLabels from '../home/ContainerLabels';
 import LiveCard from './LiveCard';
@@ -1025,11 +1028,7 @@ function LiveLeagues() {
 
 	return (
 		<MainWrapper>
-			<ContainerLabels
-				label="Premiere League"
-				href="premiere-league"
-				logo="https://media.api-sports.io/football/leagues/39.png"
-			/>
+			<ContainerLabels label="Premiere League" href="premiere-league" leagueId={obj.league.id} />
 			<section className="flex flex-wrap w-live-wrapper gap-10 pb-10">
 				<LiveCard key={obj.fixture.id} fixture={obj} isLivePage />
 				<LiveCard key={obj.fixture.id} fixture={obj} isLivePage />
